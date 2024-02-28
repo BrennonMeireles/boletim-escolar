@@ -4,7 +4,7 @@
 Este é o repositório do projeto de Boletim Escolar desenvolvido como parte do curso no Senai. O projeto foi elaborado utilizando HTML, CSS e JavaScript, com um design responsivo para garantir uma experiência consistente em diferentes dispositivos.<br><br>
 
 <div align="center">
-  <img src="https://github.com/BrennonMeireles/boletim-escolar/assets/141636246/beb8c887-298b-4101-81f5-2e5b305c529b" alt="image" width="400px">
+  <img src="https://github.com/BrennonMeireles/boletim-escolar/assets/141636246/beb8c887-298b-4101-81f5-2e5b305c529b" alt="image" width="600px">
 </div>
 
 <br><br>
