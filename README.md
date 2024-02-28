@@ -1,12 +1,11 @@
 🚧 em desenvolvimento 🚧
 
 # Boletim Escolar
-Este é o repositório do projeto de Boletim Escolar desenvolvido como parte do curso no Senai. O projeto foi elaborado utilizando HTML, CSS e JavaScript, com um design responsivo para garantir uma experiência consistente em diferentes dispositivos.<br>
+Este é o repositório do projeto de Boletim Escolar desenvolvido como parte do curso no Senai. O projeto foi elaborado utilizando HTML, CSS e JavaScript, com um design responsivo para garantir uma experiência consistente em diferentes dispositivos.
 
 <div align="center">
 ![image](https://github.com/BrennonMeireles/boletim-escolar/assets/141636246/beb8c887-298b-4101-81f5-2e5b305c529b)
 </div>
-
 
 # Visão Geral
 O Boletim Escolar é uma aplicação web que permite aos usuários visualizarem suas notas de forma organizada e intuitiva, inspirado no estilo e design do Senai. Utilizamos o Figma para criar o design inicial, buscando uma integração visual com o ambiente do curso.
