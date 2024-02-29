@@ -1,0 +1,39 @@
+1. Desenvolver uma aplicação web (HTML, CSS e JS) RESPONSIVA que leia as seguintes informações para 5 alunos com:
+  _nome do aluno;
+  _4 notas bimestrais.
+
+******************************************
+Dados para determinar a situação do aluno:
+******************************************
+Se média final for maior ou igual a 70, situação = "Aprovado";
+Se média final for maior ou igual a 50 e menor que 70, situação = "Recuperação";
+Senão situação = "Reprovado".
+
+Esta aplicação deverá calcular a média final de cada aluno bem como a média geral da turma e deverá exibir:
+  1. Todos os dados para cada um dos 5 alunos (nome, notas bimestrais,média final e situação do aluno);
+  2. a média geral da turma;
+  3. nome dos alunos que obtiveram a média final abaixo da média geral da turma.
+
+Os alunos com situação = "Aprovado"    deverão ser formatados com background verde.
+Os alunos com situação = "Reprovado"   deverão ser formatados com background vermelho.
+Os alunos com situação = "Recuperação" deverão ser formatados com background amarelo.
+
+Informações sobre a sprint:
+1. Executar esta sprint em DUPLAS!
+
+2. Entregas:
+   [] 2.1. Todo os os arquivos (html, css e js);
+   [] 2.2. Print do protótipo;
+   [] 2.3. Link da url do site e;
+   [] 2.4. Link do repositório.
+
+3. Onde entregar:
+Teams
+Canal: Imersão Javascript/Arquivos/Boletim Escolar
+
+4. Data da entrega:
+01/03/2024 - 12:00
+
+
+
+
