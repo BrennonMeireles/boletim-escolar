@@ -30,9 +30,8 @@ nav > h1{
 
 .container {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-left: 22%;
+    max-width: 1000px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,7 +119,7 @@ th, td {
 }
 
 /* função pra centralizar somente as notas */
-.nota , .situacao{
+.nota , .situacao, .infoAluno{
     text-align: center;
 }
 
@@ -149,6 +148,11 @@ th {
 .linha {
     display: flex;
     justify-content: center;    
+}
+
+button a {
+    text-decoration: none;
+    color: white;
 }
 
   /* Estilos para telas menores */
