@@ -22,35 +22,47 @@
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome">
 
-              <label for="numero">N°:</label>
-              <input type="text" id="numero" name="numero">
+              <label for="curso">Curso:</label>
+              <input type="text" id="curso" name="curso" value="teste">
 
               <label for="ano">Ano letivo:</label>
               <input type="text" id="ano" name="ano">
-          </div>
-
-          <div class="coluna-direita">
-              <label for="curso">Curso:</label>
-              <input type="text" id="curso" name="curso" value="brennon">
+              
+              <label for="periodo">Periodo:</label>
+              <input type="text" id="periodo" name="periodo">
 
               <label for="especializacao">Especialização:</label>
               <input type="text" id="especializacao" name="especializacao">
+              
+              
+            </div>
+            
+            <div class="coluna-direita">
+              <label for="nota1">Nota 1° Bimestre:</label>
+              <input type="text" id="nota1" name="nota1">
 
-              <label for="periodo">Periodo:</label>
-              <input type="text" id="periodo" name="periodo">
+              <label for="nota2">Nota: 2° Bimestre</label>
+              <input type="text" id="nota2" name="nota2">
+
+              <label for="nota3">Nota: 3° Bimestre</label>
+              <input type="text" id="nota3" name="nota3">
+              
+              <label for="nota4">Nota: 4° Bimestre</label>
+              <input type="text" id="nota4" name="nota4">
+              
 
               <button onclick="created()" class="bn3">CRIAR</button>
           </div>    
         </div>    
-        
+
         <!-- tabela que exibira os resultados -->
             <div class="tabela">
                 <table>
                     <thead>
                       <tr>
                         <th class="cod">CÓDIGO E TÍTULO DO CURSO</th>
-                        <th class="nota">NOTA</th>
-                        <th class="situacao">Situação</th>
+                        <th class="nota">MÉDIA</th>
+                        <th class="situacao">SITUAÇÃO</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -73,7 +85,6 @@
                 </table>
             </div>
     </div>
-
     
     <script src="script.js"></script>
 </body>
