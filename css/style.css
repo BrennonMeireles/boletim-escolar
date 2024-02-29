@@ -99,6 +99,21 @@ th {
     margin-bottom: 100px;
   }
 
+
+.linha{
+    display: flex;
+    justify-content: center;    
+}
+
+hr{
+    height: 4px;
+    width: 800px;
+    background-color: black;
+    display: flex;
+    text-align: center;
+    margin: 10px;
+  }
+
   /* Estilos para telas menores */
   
 @media screen and (max-width: 1000px) {
@@ -114,6 +129,10 @@ th {
 
     .tabela {
         max-width: 100%; /* Faz a tabela ocupar toda a largura do container */
+    }
+
+    hr{
+        width: 800px;
     }
 }
 
@@ -132,4 +151,9 @@ th {
     .tabela {
         max-width: 100%; /* Faz a tabela ocupar toda a largura do container */
     }
+
+    hr{
+        width: 600px;
+    }
+
 }
