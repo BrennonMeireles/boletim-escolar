@@ -26,20 +26,58 @@ nav {
 
 nav > h1{
     margin-left: 100px;
-}
+}   
 
 .container {
-    padding: 20px;
+    position: relative;
     max-width: 800px;
-    height: 200px;
     margin: 0 auto;
     margin-left: 22%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
+}
+
+hr {
+    border: 2px solid black; 
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button{
+    display: block;
+    position: absolute;
+    right:  1px;
+}
+
+.bn3 {
+    background-color: black;
+    padding: 0.5em 1.7em;
+    margin: 10px 0px;
+    /* border: 0.16em solid rgb(0, 0, 0); */
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+    text-align: center;
+    transition: all 0.2s;
+  }
+  
+  .bn3:hover {
+    color: white;
+    background-color: rgb(243, 8, 8);
+  }
+
+.colunas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .titulo {
@@ -58,9 +96,9 @@ h2 {
 }
 
 .tabela {
-    max-width: 850px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 50px;
 
     text-align: center;
     display: flex;
@@ -87,6 +125,19 @@ th, td {
     text-align: center;
 }
 
+label{
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 th {
     background-color: red;
     color: white;
@@ -99,15 +150,6 @@ th {
 .linha {
     display: flex;
     justify-content: center;    
-}
-
-hr {
-    height: 4px;
-    width: 800px;
-    background-color: black;
-    display: flex;
-    text-align: center;
-    margin: 10px;
 }
 
   /* Estilos para telas menores */

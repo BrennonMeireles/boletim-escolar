@@ -14,51 +14,66 @@
 
     <h1 class="titulo">BOLETIM</h1>
 
-    <div class="linha">
-      <hr>  <!--elemento pra gerar linha -->
-    </div>
     <div class="container">
-      <div class="coluna-esquerda">
-            <h2>Nome:</h2>
-            <h2>N°:</h2>
-            <h2>Ano letivo:</h2>
-        </div>
+      <hr>
 
-        <div class="coluna-direita">
-            <h2>Curso:</h2>
-            <h2>Especialização:</h2>
-            <h2>Periodo:</h2>
-        </div>        
+      <div class="colunas">
+        <div class="coluna-esquerda">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome">
+
+              <label for="numero">N°:</label>
+              <input type="text" id="numero" name="numero">
+
+              <label for="ano">Ano letivo:</label>
+              <input type="text" id="ano" name="ano">
+          </div>
+
+          <div class="coluna-direita">
+              <label for="curso">Curso:</label>
+              <input type="text" id="curso" name="curso" value="brennon">
+
+              <label for="especializacao">Especialização:</label>
+              <input type="text" id="especializacao" name="especializacao">
+
+              <label for="periodo">Periodo:</label>
+              <input type="text" id="periodo" name="periodo">
+
+              <button onclick="created()" class="bn3">CRIAR</button>
+          </div>    
+        </div>    
+        <!-- tabela que exibira os resultados -->
+            <div class="tabela">
+                <table>
+                    <thead>
+                      <tr>
+                        <th class="cod">CÓDIGO E TÍTULO DO CURSO</th>
+                        <th class="nota">NOTA</th>
+                        <th class="situacao">Situação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>João</td>
+                        <td class="nota">25</td>
+                        <td class="situacao">Aprovado</td>
+                      </tr>
+                      <tr>
+                        <td>Maria</td>
+                        <td class="nota">30</td>
+                        <td class="situacao">Recuperação</td>
+                      </tr>
+                      <tr>
+                        <td>Carlos</td>
+                        <td class="nota">22</td>
+                        <td class="situacao">Reprovado</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
     </div>
 
-<!-- tabela que exibira os resultados -->
-    <div class="tabela">
-        <table>
-            <thead>
-              <tr>
-                <th class="cod">CÓDIGO E TÍTULO DO CURSO</th>
-                <th class="nota">NOTA</th>
-                <th class="situacao">Situação</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>João</td>
-                <td class="nota">25</td>
-                <td class="situacao">Aprovado</td>
-              </tr>
-              <tr>
-                <td>Maria</td>
-                <td class="nota">30</td>
-                <td class="situacao">Recuperação</td>
-              </tr>
-              <tr>
-                <td>Carlos</td>
-                <td class="nota">22</td>
-                <td class="situacao">Reprovado</td>
-              </tr>
-            </tbody>
-        </table>
-    </div> 
+    
+    <script src="script.js"></script>
 </body>
 </html>
