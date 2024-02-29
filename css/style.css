@@ -105,9 +105,18 @@ h2 {
 }
 
 table {
+    display: none;
+}
+
+.tablee{
+    display: inline-table;
     width: 100%;
     border-collapse: separate; /* Alterado para 'separate' para que o border-spacing tenha efeito */
     border-spacing: 5px; /* Define o espaçamento entre as células */
+}
+
+.situacao{
+    font-weight: bold;
 }
 
 th, td {
