@@ -1,18 +1,27 @@
 let alunos = [];
 
+
 // Verifica se há dados salvos no localStorage
 const alunosSalvos = JSON.parse(localStorage.getItem('alunos'));
 if (alunosSalvos && Array.isArray(alunosSalvos)) {
     alunos = alunosSalvos;
     
-    // Se houver alunos salvos, remova as quatro primeiras linhas da tabela
-    const tbody = document.querySelector('tbody');
-    for (let i = 0; i < 4; i++) {
-        tbody.removeChild(tbody.firstElementChild);
-    }
-    
+    // Aguarde o DOMContentLoaded para garantir que a tabela esteja carregada
+    document.addEventListener('DOMContentLoaded', function () {
+        const tbody = document.querySelector('tbody');
+        for (let i = 0; i < 4; i++) {
+            tbody.removeChild(tbody.firstElementChild);
+        }
+    });
 } else {
+    // Se não houver dados salvos, inicialize alunos como um array vazio
+    alunos = [];
     localStorage.setItem('alunos', JSON.stringify(alunos));
+}
+
+// Verifica se o localStorage está vazio
+if (!alunosSalvos || !Array.isArray(alunosSalvos) || alunosSalvos.length === 0) {
+    localStorage.clear();   
 }
 
 let tbody = document.querySelector('tbody');
@@ -48,7 +57,6 @@ function created() {
         aprovacao = "Reprovado";
     }
 
-    // Criar instância de Aluno antes de usá-la
     const aluno1 = new Aluno(alunos.length, nome, curso, ano, periodo, especializacao, nota1, nota2, nota3, nota4, media, aprovacao);
 
     let situacaoElement = document.createElement('td');
@@ -66,13 +74,10 @@ function created() {
     alunos.push(aluno1);
     localStorage.setItem('alunos', JSON.stringify(alunos));
 
-    // Limpar os valores dos inputs
-
     location.reload();
 }
 
 function getCorAprovacao(aprovacao) {
-    // Adapte isso conforme necessário com base nas suas condições
     if (aprovacao === "Aprovado") {
         return "green";
     } else if (aprovacao === "Reprovado") {
@@ -100,3 +105,4 @@ function reset(){
 }
 
 console.log(alunos);
+
