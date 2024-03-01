@@ -4,6 +4,13 @@ let alunos = [];
 const alunosSalvos = JSON.parse(localStorage.getItem('alunos'));
 if (alunosSalvos && Array.isArray(alunosSalvos)) {
     alunos = alunosSalvos;
+    
+    // Se houver alunos salvos, remova as quatro primeiras linhas da tabela
+    const tbody = document.querySelector('tbody');
+    for (let i = 0; i < 4; i++) {
+        tbody.removeChild(tbody.firstElementChild);
+    }
+    
 } else {
     localStorage.setItem('alunos', JSON.stringify(alunos));
 }
@@ -11,9 +18,6 @@ if (alunosSalvos && Array.isArray(alunosSalvos)) {
 let tbody = document.querySelector('tbody');
 let table = document.querySelector('table');
 
-if(alunos.length !== 0){
-    table.classList.add('tablee');
-}
 
 function created() {
 
@@ -22,8 +26,6 @@ function created() {
     let ano = document.querySelector('#ano').value;
     let periodo = document.querySelector('#periodo').value;
     let especializacao = document.querySelector('#especializacao').value;
-
-    table.classList.add('tablee');
 
     let nota1 = parseInt(document.querySelector('#nota1').value);
     let nota2 = parseInt(document.querySelector('#nota2').value);
@@ -87,11 +89,14 @@ for (const aluno of alunos) {
         <td>${aluno.nome}</td>
         <td class="nota">${aluno.media}</td>
         <td class="situacao" style="color: ${getCorAprovacao(aluno.aprovacao)}">${aluno.aprovacao}</td>
-        <td class="infoAluno"><a href="aluno.html?index=${aluno.index}">ver mais</a></td>
+        <td class="infoAluno"><a href="aluno.html?index=${aluno.id}">ver mais</a></td>
     </tr>
     `;
-}
+} 
 
-// localStorage.clear();       
+function reset(){
+    localStorage.clear();
+    location.reload();
+}
 
 console.log(alunos);
