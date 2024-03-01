@@ -1,15 +1,27 @@
-
-
 let alunos = [];
 
+// Verifica se há dados salvos no localStorage
+const alunosSalvos = JSON.parse(localStorage.getItem('alunos'));
+if (alunosSalvos && Array.isArray(alunosSalvos)) {
+    alunos = alunosSalvos;
+} else {
+    localStorage.setItem('alunos', JSON.stringify(alunos));
+}
+
+let tbody = document.querySelector('tbody');
+let table = document.querySelector('table');
+
+if(alunos.length !== 0){
+    table.classList.add('tablee');
+}
+
 function created() {
+
     let nome = document.querySelector('#nome').value;
     let curso = document.querySelector('#curso').value;
     let ano = document.querySelector('#ano').value;
     let periodo = document.querySelector('#periodo').value;
     let especializacao = document.querySelector('#especializacao').value;
-    let tbody = document.querySelector('tbody');
-    let table = document.querySelector('table');
 
     table.classList.add('tablee');
 
@@ -34,6 +46,9 @@ function created() {
         aprovacao = "Reprovado";
     }
 
+    // Criar instância de Aluno antes de usá-la
+    const aluno1 = new Aluno(alunos.length, nome, curso, ano, periodo, especializacao, nota1, nota2, nota3, nota4, media, aprovacao);
+
     let situacaoElement = document.createElement('td');
     situacaoElement.setAttribute('class', 'nota');
     situacaoElement.textContent = aprovacao;
@@ -45,30 +60,38 @@ function created() {
     } else if (aprovacao === "Recuperação") {
         situacaoElement.style.color = "rgb(255, 215, 0)";
     }
-
-    tbody.innerHTML += `
-        <tr>
-            <td>${nome}</td>
-            <td class="nota">${media}</td>
-            <td class="situacao" style="color: ${situacaoElement.style.color}">${aprovacao}</td>
-            <td class="infoAluno"><a href="aluno.html">ver mais</a></td>
-        </tr>
-    `;
-
-    const aluno1 = new Aluno(nome, curso, ano, periodo, especializacao, media);
+        
     alunos.push(aluno1);
-
+    localStorage.setItem('alunos', JSON.stringify(alunos));
 
     // Limpar os valores dos inputs
-    document.querySelector('#nome').value = '';
-    document.querySelector('#curso').value = '';
-    document.querySelector('#ano').value = '';
-    document.querySelector('#periodo').value = '';
-    document.querySelector('#especializacao').value = '';
-    document.querySelector('#nota1').value = '';
-    document.querySelector('#nota2').value = '';
-    document.querySelector('#nota3').value = '';
-    document.querySelector('#nota4').value = '';
 
-    console.log(alunos)
+    location.reload();
 }
+
+function getCorAprovacao(aprovacao) {
+    // Adapte isso conforme necessário com base nas suas condições
+    if (aprovacao === "Aprovado") {
+        return "green";
+    } else if (aprovacao === "Reprovado") {
+        return "red";
+    } else if (aprovacao === "Recuperação") {
+        return "rgb(255, 215, 0)";
+    }
+    return "black"; // Cor padrão ou ajuste conforme necessário
+}
+
+for (const aluno of alunos) {
+    tbody.innerHTML += `
+    <tr>
+        <td>${aluno.nome}</td>
+        <td class="nota">${aluno.media}</td>
+        <td class="situacao" style="color: ${getCorAprovacao(aluno.aprovacao)}">${aluno.aprovacao}</td>
+        <td class="infoAluno"><a href="aluno.html?index=${aluno.index}">ver mais</a></td>
+    </tr>
+    `;
+}
+
+// localStorage.clear();       
+
+console.log(alunos);

@@ -47,7 +47,7 @@ hr {
     width: 100%;
 }
 
-button{
+.criar{
     display: block;
     position: absolute;
     right:  1px;
@@ -163,6 +163,11 @@ th {
 button a {
     text-decoration: none;
     color: white;
+}
+
+/* alunos */
+p {
+    font-size: 25px;
 }
 
   /* Estilos para telas menores */
