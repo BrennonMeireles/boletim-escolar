@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -27,6 +29,10 @@ nav {
 
 nav > h1{
     margin-left: 100px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;  
 }   
 
 .container {
@@ -60,12 +66,16 @@ hr {
     border-radius: 2em;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
     text-align: center;
     transition: all 0.2s;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;  
   }
   
   .bn3:hover {
@@ -84,9 +94,14 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 64px;
     padding-bottom: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;  
 }
 
 h2 {
@@ -120,9 +135,12 @@ th, td {
     text-align: left;
     background-color: #f3f3f3;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     height: 50px;
     
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
 }
 
 /* função pra centralizar somente as notas */
@@ -148,8 +166,12 @@ th {
     color: white;
     text-align: center;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 100px;
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
 }
 
 .linha {
@@ -160,6 +182,11 @@ th {
 button a {
     text-decoration: none;
     color: white;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
 }
 
 /* alunos */
