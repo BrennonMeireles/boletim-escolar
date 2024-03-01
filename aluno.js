@@ -1,5 +1,5 @@
 class Aluno {
-    index;
+    id;
     nome;
     curso;
     ano;
@@ -12,8 +12,8 @@ class Aluno {
     media;
     aprovacao;
 
-    constructor(index, nome, curso, ano, periodo, especializacao, nota1, nota2, nota3, nota4, media, aprovacao){
-        this.index = index;
+    constructor(id, nome, curso, ano, periodo, especializacao, nota1, nota2, nota3, nota4, media, aprovacao){
+        this.id = id;
         this.nome = nome;
         this.curso = curso;
         this.ano = ano;

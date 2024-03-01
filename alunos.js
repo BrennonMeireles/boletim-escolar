@@ -1,34 +1,46 @@
-    // Obtém a URL atual
-    var urlParams = new URLSearchParams(window.location.search);
+// Obtém a URL atual
+var urlParams = new URLSearchParams(window.location.search);
 
-    // Obtém o valor do parâmetro "index"
-    var index = urlParams.get('index');
+// Obtém o valor do parâmetro "index"
+var index = urlParams.get('index');
 
-    // Exibe o valor do parâmetro na console (você pode fazer o que quiser com ele)
+// Encontra o aluno com base no id igual ao valor do parâmetro "index"
+var alunoSelecionado = alunos.find(function(aluno) {
+    return aluno.id === parseInt(index); // Certifique-se de converter para número, se necessário
+});
+
+// Verifica se o aluno foi encontrado
+if (alunoSelecionado) {
     console.log('Valor do parâmetro "index":', index);
 
-    console.log(alunos[index])
+    // Restante do código permanece o mesmo
+    document.querySelector('.nome').textContent = alunoSelecionado.nome;
+    document.querySelector('.curso').textContent = alunoSelecionado.curso;
+    document.querySelector('.ano').textContent = alunoSelecionado.ano;
+    document.querySelector('.periodo').textContent = alunoSelecionado.periodo;
+    document.querySelector('.especializacao').textContent = alunoSelecionado.especializacao;
+    document.querySelector('.nota1').textContent = alunoSelecionado.nota1;
+    document.querySelector('.nota2').textContent = alunoSelecionado.nota2;
+    document.querySelector('.nota3').textContent = alunoSelecionado.nota3;
+    document.querySelector('.nota4').textContent = alunoSelecionado.nota4;
+    document.querySelector('.media').textContent = alunoSelecionado.media;
+    document.querySelector('.situacaoo').textContent = alunoSelecionado.aprovacao;
 
-    document.querySelector('.nome').textContent = alunos[index].nome;
-    document.querySelector('.curso').textContent = alunos[index].curso
-    document.querySelector('.ano').textContent = alunos[index].ano
-    document.querySelector('.periodo').textContent = alunos[index].periodo
-    document.querySelector('.especializacao').textContent = alunos[index].especializacao
-    document.querySelector('.nota1').textContent = alunos[index].nota1         
-    document.querySelector('.nota2').textContent = alunos[index].nota2
-    document.querySelector('.nota3').textContent =  alunos[index].nota3;
-    document.querySelector('.nota4').textContent =  alunos[index].nota4;
-    document.querySelector('.media').textContent = alunos[index].media;   
-    document.querySelector('.situacaoo').textContent = alunos[index].aprovacao;
-
-
-    function deleted(index) {
+    // Função deleted agora deve ser chamada com o objeto alunoSelecionado
+    function deleted() {
+        // Encontra o índice do aluno no array
+        var alunoIndex = alunos.indexOf(alunoSelecionado);
+        
         // Remover o aluno do array pelo índice
-        alunos.splice(index, 1);
-    
+        alunos.splice(alunoIndex, 1);
+
         // Atualizar o localStorage
         localStorage.setItem('alunos', JSON.stringify(alunos));
-    
+
         // Redirecionar de volta para a página inicial
         window.location.href = 'index.html';
     }
+} else {
+    console.error('Aluno não encontrado com o ID:', index);
+}
+    
