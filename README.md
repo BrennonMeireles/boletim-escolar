@@ -1,5 +1,3 @@
-🚧 em desenvolvimento 🚧
-
 # Boletim Escolar
 Este é o repositório do projeto de Boletim Escolar desenvolvido como parte do curso no Senai. O projeto foi elaborado utilizando HTML, CSS e JavaScript, com um design responsivo para garantir uma experiência consistente em diferentes dispositivos.<br><br>
 
