@@ -4,7 +4,6 @@ Este é o repositório do projeto de Boletim Escolar desenvolvido como parte do 
 <div align="center">
   <img src="https://github.com/BrennonMeireles/boletim-escolar/assets/141636246/beb8c887-298b-4101-81f5-2e5b305c529b" alt="image" width="600px">
 </div>
-
 <br><br>
 
 # Visão Geral
